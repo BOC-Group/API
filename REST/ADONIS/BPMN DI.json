@@ -1,0 +1,558 @@
+{
+    "components": {
+        "examples": {
+            "BPMNDISimpleExampleXML": {
+                "value": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<definitions xmlns=\"http://www.omg.org/spec/BPMN/20100524/MODEL\"\n            xmlns:bpmndi=\"http://www.omg.org/spec/BPMN/20100524/DI\"\n            xmlns:omgdc=\"http://www.omg.org/spec/DD/20100524/DC\"\n            xmlns:omgdi=\"http://www.omg.org/spec/DD/20100524/DI\"\n            xmlns:bpmn=\"http://www.omg.org/spec/BPMN/20100524/MODEL\"\n            xmlns:xmi=\"http://www.omg.org/XMI\"\n            xmlns:bpmn2=\"http://www.omg.org/spec/BPMN/20100524/MODEL\"\n            xmlns:adonis=\"http://www.boc-group.com\"\n            xmlns:semantic=\"http://www.omg.org/spec/BPMN/20100524/MODEL\"\n            xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"\n            xmlns:model=\"http://www.omg.org/spec/BPMN/20100524/MODEL\"\n            xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n            id=\"definition__a7bc4581-8480-4b46-86fc-cc2cbe194822\"\n            typeLanguage=\"http://www.w3.org/2001/XMLSchema\"\n            xsi:schemaLocation=\"http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd\"\n            targetNamespace=\"http://www.boc-group.com\">\n  <process id=\"process_c1aab2f7-d939-4bc2-bad0-c37386ef4a9f\"\n            name=\"BPMN model - sub process\">\n      <laneSet id=\"laneSet_c1aab2f7-d939-4bc2-bad0-c37386ef4a9f\"/>\n      <startEvent name=\"Start Event\" id=\"_9fdf90f2-aa3f-4dde-acc6-72e420c53af6\">\n        <outgoing>_a140c76f-90b3-4ce6-aaa6-c2deae50f87f</outgoing>\n      </startEvent>\n      <endEvent name=\"End Event\" id=\"_de978d81-55da-4a81-936b-e7bdc58e0f39\">\n        <incoming>_bab4ec17-fd27-4475-ad53-5aad467adea4</incoming>\n      </endEvent>\n      <task name=\"Task\"\n            id=\"_fd161051-e939-45e2-b905-bf0e036a968b\"\n            isForCompensation=\"false\">\n        <incoming>_a140c76f-90b3-4ce6-aaa6-c2deae50f87f</incoming>\n        <outgoing>_bab4ec17-fd27-4475-ad53-5aad467adea4</outgoing>\n      </task>\n      <sequenceFlow sourceRef=\"_9fdf90f2-aa3f-4dde-acc6-72e420c53af6\"\n                    targetRef=\"_fd161051-e939-45e2-b905-bf0e036a968b\"\n                    id=\"_a140c76f-90b3-4ce6-aaa6-c2deae50f87f\"/>\n      <sequenceFlow sourceRef=\"_fd161051-e939-45e2-b905-bf0e036a968b\"\n                    targetRef=\"_de978d81-55da-4a81-936b-e7bdc58e0f39\"\n                    id=\"_bab4ec17-fd27-4475-ad53-5aad467adea4\"/>\n  </process>\n  <process id=\"process_a7bc4581-8480-4b46-86fc-cc2cbe194822\"\n            name=\"BPMN model\"\n            isExecutable=\"false\"\n            isClosed=\"false\"\n            processType=\"None\">\n      <callActivity name=\"Subprocess\"\n                    id=\"_2e8e72a8-db4b-4c0b-8425-c018562a5097\"\n                    isForCompensation=\"false\"\n                    calledElement=\"process_c1aab2f7-d939-4bc2-bad0-c37386ef4a9f\"\n                    startQuantity=\"0\">\n        <incoming>_2af284d5-1890-4135-b051-0a42735c3860</incoming>\n        <outgoing>_dddfce1a-0676-4711-93f1-ec92b47e13a9</outgoing>\n      </callActivity>\n      <endEvent name=\"End Event\" id=\"_78210f6a-a064-4eae-92d7-0b0bea5a02ca\">\n        <incoming>_dddfce1a-0676-4711-93f1-ec92b47e13a9</incoming>\n      </endEvent>\n      <startEvent name=\"Start Event\" id=\"_7da927a7-1908-40c4-adcd-005d18cd8cf9\">\n        <outgoing>_2af284d5-1890-4135-b051-0a42735c3860</outgoing>\n      </startEvent>\n      <sequenceFlow sourceRef=\"_7da927a7-1908-40c4-adcd-005d18cd8cf9\"\n                    targetRef=\"_2e8e72a8-db4b-4c0b-8425-c018562a5097\"\n                    id=\"_2af284d5-1890-4135-b051-0a42735c3860\"/>\n      <sequenceFlow sourceRef=\"_2e8e72a8-db4b-4c0b-8425-c018562a5097\"\n                    targetRef=\"_78210f6a-a064-4eae-92d7-0b0bea5a02ca\"\n                    id=\"_dddfce1a-0676-4711-93f1-ec92b47e13a9\"/>\n  </process>\n  <bpmndi:BPMNDiagram name=\"BPMN model\" id=\"Diagram_a7bc4581-8480-4b46-86fc-cc2cbe194822\">\n      <bpmndi:BPMNPlane id=\"BPMNPlane_a7bc4581-8480-4b46-86fc-cc2cbe194822\"\n                        bpmnElement=\"process_a7bc4581-8480-4b46-86fc-cc2cbe194822\">\n        <bpmndi:BPMNShape bpmnElement=\"_7da927a7-1908-40c4-adcd-005d18cd8cf9\"\n                          id=\"BPMN_Shape_7da927a7-1908-40c4-adcd-005d18cd8cf9\">\n            <omgdc:Bounds width=\"56\" height=\"56\" x=\"105\" y=\"180\"/>\n        </bpmndi:BPMNShape>\n        <bpmndi:BPMNShape bpmnElement=\"_78210f6a-a064-4eae-92d7-0b0bea5a02ca\"\n                          id=\"BPMN_Shape_78210f6a-a064-4eae-92d7-0b0bea5a02ca\">\n            <omgdc:Bounds width=\"56\" height=\"56\" x=\"483\" y=\"180\"/>\n        </bpmndi:BPMNShape>\n        <bpmndi:BPMNShape bpmnElement=\"_2e8e72a8-db4b-4c0b-8425-c018562a5097\"\n                          isExpanded=\"false\"\n                          id=\"BPMN_Shape_2e8e72a8-db4b-4c0b-8425-c018562a5097\">\n            <omgdc:Bounds height=\"76\" width=\"151\" x=\"265\" y=\"170\"/>\n        </bpmndi:BPMNShape>\n        <bpmndi:BPMNEdge id=\"BPMN_Edge_2af284d5-1890-4135-b051-0a42735c3860\"\n                          bpmnElement=\"_2af284d5-1890-4135-b051-0a42735c3860\">\n            <omgdi:waypoint x=\"165\" y=\"208\"/>\n            <omgdi:waypoint x=\"260\" y=\"208\"/>\n            <bpmndi:BPMNLabel>\n              <omgdc:Bounds x=\"200\" y=\"208\" width=\"60\" height=\"40\"/>\n            </bpmndi:BPMNLabel>\n        </bpmndi:BPMNEdge>\n        <bpmndi:BPMNEdge id=\"BPMN_Edge_dddfce1a-0676-4711-93f1-ec92b47e13a9\"\n                          bpmnElement=\"_dddfce1a-0676-4711-93f1-ec92b47e13a9\">\n            <omgdi:waypoint x=\"421\" y=\"208\"/>\n            <omgdi:waypoint x=\"481\" y=\"208\"/>\n            <bpmndi:BPMNLabel>\n              <omgdc:Bounds x=\"449\" y=\"208\" width=\"60\" height=\"40\"/>\n            </bpmndi:BPMNLabel>\n        </bpmndi:BPMNEdge>\n      </bpmndi:BPMNPlane>\n  </bpmndi:BPMNDiagram>\n  <bpmndi:BPMNDiagram name=\"BPMN model - sub process\"\n                      id=\"Diagram_c1aab2f7-d939-4bc2-bad0-c37386ef4a9f\">\n      <bpmndi:BPMNPlane id=\"BPMNPlane_c1aab2f7-d939-4bc2-bad0-c37386ef4a9f\"\n                        bpmnElement=\"process_c1aab2f7-d939-4bc2-bad0-c37386ef4a9f\">\n        <bpmndi:BPMNShape bpmnElement=\"_9fdf90f2-aa3f-4dde-acc6-72e420c53af6\"\n                          id=\"BPMN_Shape_9fdf90f2-aa3f-4dde-acc6-72e420c53af6\">\n            <omgdc:Bounds width=\"56\" height=\"56\" x=\"105\" y=\"313\"/>\n        </bpmndi:BPMNShape>\n        <bpmndi:BPMNShape bpmnElement=\"_de978d81-55da-4a81-936b-e7bdc58e0f39\"\n                          id=\"BPMN_Shape_de978d81-55da-4a81-936b-e7bdc58e0f39\">\n            <omgdc:Bounds width=\"56\" height=\"56\" x=\"464\" y=\"313\"/>\n        </bpmndi:BPMNShape>\n        <bpmndi:BPMNShape bpmnElement=\"_fd161051-e939-45e2-b905-bf0e036a968b\"\n                          id=\"BPMN_Shape_fd161051-e939-45e2-b905-bf0e036a968b\">\n            <omgdc:Bounds height=\"76\" width=\"151\" x=\"246\" y=\"303\"/>\n        </bpmndi:BPMNShape>\n        <bpmndi:BPMNEdge id=\"BPMN_Edge_a140c76f-90b3-4ce6-aaa6-c2deae50f87f\"\n                          bpmnElement=\"_a140c76f-90b3-4ce6-aaa6-c2deae50f87f\">\n            <omgdi:waypoint x=\"165\" y=\"341\"/>\n            <omgdi:waypoint x=\"241\" y=\"341\"/>\n            <bpmndi:BPMNLabel>\n              <omgdc:Bounds x=\"200\" y=\"341\" width=\"60\" height=\"40\"/>\n            </bpmndi:BPMNLabel>\n        </bpmndi:BPMNEdge>\n        <bpmndi:BPMNEdge id=\"BPMN_Edge_bab4ec17-fd27-4475-ad53-5aad467adea4\"\n                          bpmnElement=\"_bab4ec17-fd27-4475-ad53-5aad467adea4\">\n            <omgdi:waypoint x=\"402\" y=\"341\"/>\n            <omgdi:waypoint x=\"462\" y=\"341\"/>\n            <bpmndi:BPMNLabel>\n              <omgdc:Bounds x=\"429\" y=\"341\" width=\"60\" height=\"40\"/>\n            </bpmndi:BPMNLabel>\n        </bpmndi:BPMNEdge>\n      </bpmndi:BPMNPlane>\n  </bpmndi:BPMNDiagram>\n</definitions>\n"
+            },
+            "ImportedModelsResponseXML": {
+                "value": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<response validBPMNDIFile=\"true\">\n    <rest_links>\n        <rest_link href=\"http://localhost:8050/ADOweb/rest/2.1/repos/f2086e3d-e54e-4ac3-8904-470d1e2ab445/modelgroups/1c50e957-21d3-4cae-bc2b-adc6887b4713/actions?type=import\" method=\"POST\" rel=\"self\" />\n    </rest_links>\n    <importedModels>\n        <importedModels id=\"{fe1ba704-b824-41fa-acec-57b55f900337}\" metaName=\"MT_BUSINESS_PROCESS_DIAGRAM_BPMN_20\" artefactType=\"DIAGRAM\">\n            <rest_links>\n                <rest_link href=\"http://localhost:8050/ADOweb/rest/2.1/repos/f2086e3d-e54e-4ac3-8904-470d1e2ab445/models/fe1ba704-b824-41fa-acec-57b55f900337\" method=\"GET\" rel=\"self\" />\n            </rest_links>\n            <name>\n                <![CDATA[BPMN model]]>\n            </name>\n            <type>\n                <![CDATA[Business Process Diagram]]>\n            </type>\n        </importedModels>\n        <importedModels id=\"{091bd797-64d9-406b-a853-019791d1c3e4}\" metaName=\"MT_BUSINESS_PROCESS_DIAGRAM_BPMN_20\" artefactType=\"DIAGRAM\">\n            <rest_links>\n                <rest_link href=\"http://localhost:8050/ADOweb/rest/2.1/repos/f2086e3d-e54e-4ac3-8904-470d1e2ab445/models/d091bd797-64d9-406b-a853-019791d1c3e4\" method=\"GET\" rel=\"self\" />\n            </rest_links>\n            <name>\n                <![CDATA[BPMN model - sub process]]>\n            </name>\n            <type>\n                <![CDATA[Business Process Diagram]]>\n            </type>\n        </importedModels>\n    </importedModels>\n</response>\n"
+            }
+        },
+        "links": {},
+        "schemas": {
+            "repo_id": {
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/UUID"
+                    },
+                    {
+                        "example": "790e48ca-375d-419b-bd3e-56b434424eda",
+                        "type": "string"
+                    }
+                ]
+            },
+            "group_id": {
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/UUID"
+                    },
+                    {
+                        "example": "3c944389-eb3d-438e-a2d8-7b1c7513144c",
+                        "type": "string"
+                    }
+                ]
+            },
+            "BPMNDIFile": {
+                "type": "object",
+                "xml": {
+                    "name": "response"
+                }
+            },
+            "ImportedModelsResponse": {
+                "description": "Schema representing imported models response",
+                "properties": {
+                    "importedModels": {
+                        "example": [
+                            {
+                                "artefactType": "DIAGRAM",
+                                "id": "fe1ba704-b824-41fa-acec-57b55f900337",
+                                "metaName": "MT_BUSINESS_PROCESS_DIAGRAM_BPMN_20",
+                                "name": "BPMN model",
+                                "rest_links": [
+                                    {
+                                        "href": "http://localhost/ADOxxWeb/rest/2.1/repos/bb867572-ab34-4ae1-a411-afab5dd9eb8e/models/fe1ba704-b824-41fa-acec-57b55f900337",
+                                        "method": "GET",
+                                        "rel": "self"
+                                    }
+                                ],
+                                "type": "Business Process Diagram"
+                            },
+                            {
+                                "artefactType": "DIAGRAM",
+                                "id": "091bd797-64d9-406b-a853-019791d1c3e4",
+                                "metaName": "MT_BUSINESS_PROCESS_DIAGRAM_BPMN_20",
+                                "name": "BPMN model - sub process",
+                                "rest_links": [
+                                    {
+                                        "href": "http://localhost/ADOxxWeb/rest/2.1/repos/bb867572-ab34-4ae1-a411-afab5dd9eb8e/models/091bd797-64d9-406b-a853-019791d1c3e4",
+                                        "method": "GET",
+                                        "rel": "self"
+                                    }
+                                ],
+                                "type": "Business Process Diagram"
+                            }
+                        ],
+                        "items": {
+                            "$ref": "#/components/schemas/ImportedModelsArtefact"
+                        },
+                        "type": "array"
+                    },
+                    "rest_links": {
+                        "description": "Array with hateoas rest links",
+                        "example": [
+                            {
+                                "href": "http://localhost:8050/ADOweb/rest/2.1/repos/f2086e3d-e54e-4ac3-8904-470d1e2ab445/modelgroups/1c50e957-21d3-4cae-bc2b-adc6887b4713/actions?type=import",
+                                "method": "POST",
+                                "rel": "self"
+                            }
+                        ],
+                        "items": {
+                            "$ref": "#/components/schemas/Restlink"
+                        },
+                        "readOnly": true,
+                        "type": "array",
+                        "xml": {
+                            "name": "rest_links",
+                            "wrapped": true
+                        }
+                    },
+                    "validBPMNDIFile": {
+                        "example": true,
+                        "type": "boolean"
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "response"
+                }
+            },
+            "model_id": {
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/UUID"
+                    },
+                    {
+                        "example": "3e8bbe02-73ea-4928-b9d7-e867f2911f30",
+                        "type": "string"
+                    }
+                ]
+            },
+            "UUID": {
+                "example": "fd4f597a-187c-459f-bb03-7ead670a370a",
+                "format": "uuid",
+                "type": "string"
+            },
+            "ImportedModelsArtefact": {
+                "description": "Representation of artefacts inside favourites",
+                "properties": {
+                    "artefactType": {
+                        "description": "Type of artefact",
+                        "enum": [
+                            "REPOSITORY_OBJECT",
+                            "DIAGRAM"
+                        ],
+                        "readOnly": true,
+                        "type": "string",
+                        "xml": {
+                            "attribute": true
+                        }
+                    },
+                    "id": {
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/UUID"
+                            },
+                            {
+                                "description": "Id of target artefact",
+                                "example": "{45209445-7dca-44b6-9ca4-c55f5efdda12}",
+                                "readOnly": true,
+                                "type": "string",
+                                "xml": {
+                                    "attribute": true
+                                }
+                            }
+                        ]
+                    },
+                    "metaName": {
+                        "description": "Language independent metaname of target artefact type",
+                        "example": "MT_BUSINESS_PROCESS_DIAGRAM_BPMN_20",
+                        "readOnly": true,
+                        "type": "string",
+                        "xml": {
+                            "attribute": true
+                        }
+                    },
+                    "name": {
+                        "description": "Language dependent name of target artefact",
+                        "example": "BPMN model",
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "rest_links": {
+                        "description": "Array with hateoas rest links",
+                        "items": {
+                            "$ref": "#/components/schemas/Restlink"
+                        },
+                        "readOnly": true,
+                        "type": "array",
+                        "xml": {
+                            "name": "rest_links",
+                            "wrapped": true
+                        }
+                    },
+                    "timestamp": {
+                        "description": "Time when artefact was opened",
+                        "example": 1595933847,
+                        "type": "number"
+                    },
+                    "type": {
+                        "description": "Language dependent metaname of artefact class",
+                        "example": "Business Process Diagram",
+                        "readOnly": true,
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "Restlink": {
+                "description": "Representation of HATEOAS rest link",
+                "properties": {
+                    "href": {
+                        "default": "$url",
+                        "description": "Target URI",
+                        "format": "url",
+                        "type": "string",
+                        "xml": {
+                            "attribute": true
+                        }
+                    },
+                    "method": {
+                        "description": "Http method",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE"
+                        ],
+                        "type": "string",
+                        "xml": {
+                            "attribute": true
+                        }
+                    },
+                    "rel": {
+                        "default": "self",
+                        "description": "Describes how the current context (source) is related to the target resource.",
+                        "type": "string",
+                        "xml": {
+                            "attribute": true
+                        }
+                    }
+                },
+                "type": "object",
+                "xml": {
+                    "name": "rest_link"
+                }
+            }
+        },
+        "securitySchemes": {
+            "BasicAuth": {
+                "scheme": "basic",
+                "type": "http"
+            },
+            "oAuth2": {
+                "description": "ADOxx OAuth",
+                "flows": {
+                    "authorizationCode": {
+                        "authorizationUrl": "http://localhost:8080/ADOxxWeb/oauth2/authorize",
+                        "refreshUrl": "http://localhost:8080/ADOxxWeb/oauth2/token",
+                        "scopes": {},
+                        "tokenUrl": "http://localhost:8080/ADOxxWeb/oauth2/token"
+                    }
+                },
+                "type": "oauth2"
+            }
+        }
+    },
+    "info": {
+        "description": "",
+        "title": "BPMN DI - RESTful interfaces documentation",
+        "version": "2.1.0"
+    },
+    "openapi": "3.0.2",
+    "security": [
+        {
+            "BasicAuth": []
+        },
+        {
+            "oAuth2": []
+        }
+    ],
+    "servers": [
+        {
+            "url": "{hostname}",
+            "variables": {
+                "hostname": {
+                    "default": "https://localhost:8080/ADOxx"
+                }
+            }
+        }
+    ],
+    "paths": {
+        "/rest/{api_version}/repos/{repo_id}/modelgroups/{group_id}/actions?type=import": {
+            "post": {
+                "description": "Endpoint for importing BPMN DI 2.0 XML file",
+                "operationId": "handleBPMNDIImportActions",
+                "parameters": [
+                    {
+                        "description": "Accept header",
+                        "in": "header",
+                        "name": "Accept",
+                        "required": false,
+                        "schema": {
+                            "enum": [
+                                "application/xml",
+                                "application/json"
+                            ],
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Accept-Language header with ISO 639-1 language code\n",
+                        "in": "header",
+                        "name": "Accept-Language",
+                        "required": false,
+                        "schema": {
+                            "default": "en",
+                            "example": "en",
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Version of the RESTful API from 2.1",
+                        "in": "path",
+                        "name": "api_version",
+                        "required": true,
+                        "schema": {
+                            "default": "2.1",
+                            "enum": [
+                                "2.1"
+                            ],
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "UUID of the repository",
+                        "in": "path",
+                        "name": "repo_id",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/repo_id"
+                        }
+                    },
+                    {
+                        "description": "UUID of model group, 'root' for the root model group",
+                        "in": "path",
+                        "name": "group_id",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/group_id"
+                        }
+                    },
+                    {
+                        "description": "Content type of body",
+                        "in": "header",
+                        "name": "Content-type",
+                        "required": true,
+                        "schema": {
+                            "enum": [
+                                "application/bpmn+xml"
+                            ],
+                            "example": "application/bpmn+xml",
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "In case BPMN DI module is customized by extension module it is possible to choose extension group (of registered extensions). In case extensions are registered and extensionGroupID is not set then all registered extensions are considered by default. In order to use standard BPMN DI interface without extensions when extension modules are registered, extensionGroupID have to be set to 'BPMN_DI_STANDARD'.",
+                        "in": "query",
+                        "name": "extensionGroupID",
+                        "required": false,
+                        "schema": {
+                            "example": "BPMN_DI_STANDARD",
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/bpmn+xml": {
+                            "examples": {
+                                "Simple BPMN DI file": {
+                                    "$ref": "#/components/examples/BPMNDISimpleExampleXML"
+                                }
+                            },
+                            "schema": {
+                                "$ref": "#/components/schemas/BPMNDIFile"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ImportedModelsResponse"
+                                }
+                            },
+                            "application/xml": {
+                                "examples": {
+                                    "xmlExample": {
+                                        "$ref": "#/components/examples/ImportedModelsResponseXML"
+                                    }
+                                },
+                                "schema": {
+                                    "$ref": "#/components/schemas/ImportedModelsResponse"
+                                }
+                            }
+                        },
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "(Unauthorized Access) Your request lacks valid authentication credentials"
+                    },
+                    "403": {
+                        "description": "(Forbidden) You don't have access to that action"
+                    },
+                    "404": {
+                        "description": "(Not found) The passed group does not exist"
+                    },
+                    "500": {
+                        "description": "(Internal Server Error) An unexpected server issue was encountered"
+                    }
+                },
+                "summary": "Import BPMN DI file into modelgroup",
+                "tags": [
+                    "BPMN DI"
+                ]
+            }
+        },
+        "/rest/{api_version}/repos/{repo_id}/models/{model_id}": {
+            "get": {
+                "description": "Endpoint for exporting BPMN models to BPMN DI 2.0 XML",
+                "operationId": "public",
+                "parameters": [
+                    {
+                        "description": "Accept header",
+                        "in": "header",
+                        "name": "Accept",
+                        "required": false,
+                        "schema": {
+                            "enum": [
+                                "application/bpmn+xml"
+                            ],
+                            "example": "application/bpmn+xml",
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Accept-Language header with ISO 639-1 language code\n",
+                        "in": "header",
+                        "name": "Accept-Language",
+                        "required": false,
+                        "schema": {
+                            "default": "en",
+                            "example": "en",
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "Version of the RESTful API from 2.1",
+                        "in": "path",
+                        "name": "api_version",
+                        "required": true,
+                        "schema": {
+                            "default": "2.1",
+                            "enum": [
+                                "2.1"
+                            ],
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "description": "UUID of the repository",
+                        "in": "path",
+                        "name": "repo_id",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/repo_id"
+                        }
+                    },
+                    {
+                        "description": "UUID of the model",
+                        "in": "path",
+                        "name": "model_id",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/components/schemas/model_id"
+                        }
+                    },
+                    {
+                        "description": "Determines whether to include Sub processes of the model in the export.",
+                        "in": "query",
+                        "name": "includeSubProcesses",
+                        "required": false,
+                        "schema": {
+                            "default": true,
+                            "enum": [
+                                true,
+                                false
+                            ],
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "description": "Determines whether to include Sub processes recursively. If true, sub processes of sub processes e.t.c. are considered in the export.",
+                        "in": "query",
+                        "name": "subProcessesRecursive",
+                        "required": false,
+                        "schema": {
+                            "default": false,
+                            "enum": [
+                                true,
+                                false
+                            ],
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "description": "In case BPMN DI module is customized by extension module it is possible to choose extension group (of registered extensions). In case extensions are registered and extensionGroupID is not set then all registered extensions are considered by default. In order to use standard BPMN DI interface without extensions when extension modules are registered, extensionGroupID have to be set to 'BPMN_DI_STANDARD'.",
+                        "in": "query",
+                        "name": "extensionGroupID",
+                        "required": false,
+                        "schema": {
+                            "example": "BPMN_DI_STANDARD",
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/bpmn+xml": {
+                                "examples": {
+                                    "Simple BPMN DI file": {
+                                        "$ref": "#/components/examples/BPMNDISimpleExampleXML"
+                                    }
+                                },
+                                "schema": {
+                                    "$ref": "#/components/schemas/BPMNDIFile"
+                                }
+                            }
+                        },
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "(Unauthorized Access) Your request lacks valid authentication credentials"
+                    },
+                    "403": {
+                        "description": "(Forbidden) You don't have access to that action"
+                    },
+                    "404": {
+                        "description": "(Not found) The passed model is not found"
+                    },
+                    "500": {
+                        "description": "(Internal Server Error) An unexpected server issue was encountered"
+                    }
+                },
+                "summary": "Gets a BPMN DI file of model by ID",
+                "tags": [
+                    "BPMN DI"
+                ]
+            }
+        }
+    }
+}
